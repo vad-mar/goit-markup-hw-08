@@ -1,0 +1,21 @@
+.works {
+  padding-top: 0;
+}
+
+.works__title {
+  margin-bottom: 50px;
+}
+
+.works__list {
+  display: flex;
+}
+
+.works__item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

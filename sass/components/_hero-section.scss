@@ -1,0 +1,77 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: var(--dark-bgc);
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.overlay {
+  background-image: var(--bg-gradient), url(../../images/mob/mob-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile {
+    background-image: var(--bg-gradient), url(../../images/tab/tab-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include tablet {
+    background-image: var(--bg-gradient), url(../../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.62;
+  color: var(--white-color);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__button {
+  display: inline-block;
+  height: 50px;
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  letter-spacing: 0.06em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--interactive-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @include desktop {
+    padding: 10px 32px;
+  }
+}

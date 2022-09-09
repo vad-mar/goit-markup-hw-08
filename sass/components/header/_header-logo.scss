@@ -1,0 +1,13 @@
+.logo {
+  font-size: 26px;
+  font-family: Raleway, san-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &--header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
