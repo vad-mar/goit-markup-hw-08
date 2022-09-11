@@ -59,6 +59,11 @@
   font-size: 24px;
   line-height: 1.17px;
   letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .mob-contact-tel__link {
@@ -93,6 +98,11 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-color);
+  }
 }
 
 .menu-open {
