@@ -12,19 +12,18 @@
 }
 
 .overlay {
-  background-image: var(--bg-gradient), url("../../images/mob/mob-hero.jpg");
+  background-image: var(--bg-gradient), url("./../images/mob/mob-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: var(--bg-gradient),
-      url("../../images/mob/mob-hero@2x.jpg");
+    background-image: var(--bg-gradient), url("./../images/mob/mob-hero@2x.jpg");
   }
 
   @include tablet {
-    background-image: var(--bg-gradient), url("../../images/tab/tab-hero.jpg");
+    background-image: var(--bg-gradient), url("./../images/tab/tab-hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -32,12 +31,12 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: var(--bg-gradient),
-        url("../../images/tab/tab-hero@2x.jpg");
+        url("./../images/tab/tab-hero@2x.jpg");
     }
   }
 
   @include desktop {
-    background-image: var(--bg-gradient), url("../../images/hero.jpg");
+    background-image: var(--bg-gradient), url("./../images/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -45,7 +44,7 @@
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: var(--bg-gradient), url("../../images/hero2x.jpg");
+      background-image: var(--bg-gradient), url("./../images/hero2x.jpg");
     }
   }
 }
