@@ -2,10 +2,32 @@
   background-color: var(--dark-bgc);
   padding-top: 60px;
   padding-bottom: 60px;
-
   .container {
     display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  @include desktop {
     align-items: baseline;
+  }
+}
+.footer .container {
+  text-align: center;
+}
+
+.footer__contacts {
+  @media screen and(max-width:1199px) {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    display: block;
   }
 }
 
@@ -31,5 +53,5 @@
 }
 
 .adress__item + .adress__item {
-  margin-top: 9px;
+  margin-top: 8px;
 }

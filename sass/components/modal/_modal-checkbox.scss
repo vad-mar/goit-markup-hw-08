@@ -29,11 +29,17 @@
 
 .modal__policy {
   display: flex;
-  width: 423px;
+  width: 425px;
+
+  font-size: 12px;
   align-items: center;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop {
+    font-size: 14px;
+  }
 }
 
 .modal__policy-label {

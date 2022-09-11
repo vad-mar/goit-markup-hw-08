@@ -17,46 +17,105 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header header-wrapper">
-      <div class="container header__container">
-        <a class="logo logo--header" href="./index.html">
-          <span class="logo__accent">Web</span>Studio</a
-        >
-        <nav class="header-nav">
+    <header class="page-header">
+      <div class="container page-header__сontainer">
+        <nav class="wrapper">
+          <a href="./index.html" class="logo page-header__logo link"
+            ><span class="logo__label">Web</span>Studio</a
+          >
           <ul class="site-nav list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
+              <a href="./index.html" class="site-nav__link">Студия</a>
             </li>
-            <li class="site-nav__item site-nav__item--active">
+            <li class="site-nav__item">
               <a
-                class="site-nav__link site-nav__link--current"
                 href="./portfolio.html"
-                >Портфоліо</a
+                class="site-nav__link site-nav__link--current"
+                >Портфолио</a
               >
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="#">Контакти </a>
+              <a href="" class="site-nav__link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon contacts__icon--envelope">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+
+        <ul class="contact list">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link"
+              ><svg class="contact__icon" width="16" height="12px">
+                <use href="./images/sprite.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon contacts__icon--smartphone">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+          <li class="contact__item">
+            <a href="tel:+380961111111" class="contact__link"
+              ><svg class="contact__icon" width="10" height="16">
+                <use href="./images/sprite.svg#icon-telephone"></use>
               </svg>
+
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button class="menu-open" type="button">
+          <svg class="icon-menu" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <button class="menu-close" type="button">
+            <svg class="icon-menu-cross" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a class="mob-menu__link" href="./index.html">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+              <a
+                class="mob-menu__link mob-menu__link--current"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a class="mob-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="mob-menu-bottom">
+            <ul class="mob-contact__list list">
+              <li class="mob-contact__item">
+                <a class="mob-contact__link mob-contact-tel__link" href=""
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contact__item">
+                <a class="mob-contact__link" href="">info@devstudio.com</a>
+              </li>
+            </ul>
+
+            <ul class="mob-social__list list">
+              <li class="mob-social__item">
+                <a class="mob-social__link" href="">Instagram</a>
+              </li>
+              <li class="mob-social__item">
+                <a class="mob-social__link" href="">Twitter</a>
+              </li>
+              <li class="mob-social__item">
+                <a class="mob-social__link" href="">Facebook</a>
+              </li>
+              <li class="mob-social__item">
+                <a class="mob-social__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="portfolio">
@@ -81,16 +140,40 @@
             </li>
           </ul>
           <ul class="cards list">
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-1.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-1.jpg    1x,
+                        ./images/portfolio-1-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-1.jpg    1x,
+                        ./images/tab/portfolio-tab-1-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-1.jpg    1x,
+                        ./images/mob/portfolio-mob-1-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-1.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -107,16 +190,40 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-2.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-2.jpg    1x,
+                        ./images/portfolio-2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-2.jpg    1x,
+                        ./images/tab/portfolio-tab-2-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-2.jpg    1x,
+                        ./images/mob/portfolio-mob-2-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-2.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -126,22 +233,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Постер New Orlean vs Golden Star</h2>
                   <p class="cards__categories">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-3.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-3.jpg    1x,
+                        ./images/portfolio-3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-3.jpg    1x,
+                        ./images/tab/portfolio-tab-3-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-3.jpg    1x,
+                        ./images/mob/portfolio-mob-3-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-3.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -151,22 +283,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Ресторан Seafood</h2>
                   <p class="cards__categories">Додаток</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-4.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-4.jpg    1x,
+                        ./images/portfolio-4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-4.jpg    1x,
+                        ./images/tab/portfolio-tab-4-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-4.jpg    1x,
+                        ./images/mob/portfolio-mob-4-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-4.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -176,22 +333,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Проєкт Prime</h2>
                   <p class="cards__categories">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-5.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-5.jpg    1x,
+                        ./images/portfolio-5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-5.jpg    1x,
+                        ./images/tab/portfolio-tab-5-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-5.jpg    1x,
+                        ./images/mob/portfolio-mob-5-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-5.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -201,22 +383,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
-                  <h2 class="cards__name">Проєкт Boxes</h2>
+                  <h2 class="cards__name">Проект Boxes</h2>
                   <p class="cards__categories">Додаток</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-6.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-6.jpg    1x,
+                        ./images/portfolio-6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-6.jpg    1x,
+                        ./images/tab/portfolio-tab-6-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-6.jpg    1x,
+                        ./images/mob/portfolio-mob-6-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-6.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -226,22 +433,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Inspiration has no Borders</h2>
                   <p class="cards__categories">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-7.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-7.jpg    1x,
+                        ./images/portfolio-7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-7.jpg    1x,
+                        ./images/tab/portfolio-tab-7-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-7.jpg    1x,
+                        ./images/mob/portfolio-mob-7-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-7.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -251,22 +483,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Видання Limited Edition</h2>
                   <p class="cards__categories">Дизайн</p>
-                </div></a
-              >
+                </div>
+              </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-8.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-8.jpg    1x,
+                        ./images/portfolio-8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-8.jpg    1x,
+                        ./images/tab/portfolio-tab-8-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-8.jpg    1x,
+                        ./images/mob/portfolio-mob-8-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-8.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -276,22 +533,47 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Проєкт LAB</h2>
                   <p class="cards__categories">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="cards__item">
               <a class="cards__link" href="#" target="_blank">
                 <div class="cards__wrapper">
-                  <img
-                    src="./images/works-9.jpg"
-                    alt="Пример работ"
-                    class="cards__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-9.jpg    1x,
+                        ./images/portfolio-9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab/portfolio-tab-9.jpg    1x,
+                        ./images/tab/portfolio-tab-9-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mob/portfolio-mob-9.jpg    1x,
+                        ./images/mob/portfolio-mob-9-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/mob/portfolio-mob-9.jpg"
+                      alt="Пример работ"
+                      class="cards__img"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="cards__overlay">
                     <p class="cards__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -301,6 +583,7 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="cards__border">
                   <h2 class="cards__name">Growing Business</h2>
                   <p class="cards__categories">Додаток</p>
@@ -313,7 +596,7 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer__contacts">
           <a class="logo logo--footer" href="./index.html"
             ><span class="logo__accent">Web</span>Studio</a
           >
@@ -399,5 +682,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

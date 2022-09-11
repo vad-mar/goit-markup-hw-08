@@ -1,0 +1,144 @@
+.mob-menu {
+  z-index: 1;
+  position: fixed;
+  background-color: var(--white-color);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mob-menu__link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mob-contact__list {
+  margin-bottom: 64px;
+}
+
+.mob-contact__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mob-contact__link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17px;
+  letter-spacing: 0.02em;
+}
+
+.mob-contact-tel__link {
+  color: var(--accent-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+
+  letter-spacing: 0.02em;
+}
+
+.mob-social__list {
+  display: flex;
+}
+
+.mob-social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+    .mob-social__link {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 10px;
+    }
+  }
+}
+
+.mob-social__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.menu-open {
+  border: none;
+  fill: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-close {
+  position: absolute;
+  right: 15px;
+  top: -39px;
+
+  border: none;
+  fill: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.menu-open {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu__link--current {
+  color: var(--accent-color);
+}

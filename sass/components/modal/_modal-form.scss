@@ -3,9 +3,12 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--primary-color);
+  @include desktop {
+    line-height: 1.15;
+  }
 }
 
 .modal__form {

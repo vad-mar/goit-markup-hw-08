@@ -1,8 +1,14 @@
-.header-wrapper {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.header__container {
+.wrapper {
   display: flex;
   align-items: center;
+}
+
+.page-header__сontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
