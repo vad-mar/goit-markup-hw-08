@@ -40,16 +40,16 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/tab/hero-tab.jpg");
-  }
-  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/tab/hero-tab@2x.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/tab/hero-tab@2x.jpg");
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -62,16 +62,16 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/hero-desk.jpg");
-  }
-  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/hero-desk@2x.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-desk@2x.jpg");
+    }
   }
 }
 
