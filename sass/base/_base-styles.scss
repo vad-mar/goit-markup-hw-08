@@ -4,7 +4,12 @@ body {
   color: var(--primary-color);
   letter-spacing: 0.03em;
   background-color: var(--white-color);
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
+
 img {
   display: block;
   max-width: 100%;

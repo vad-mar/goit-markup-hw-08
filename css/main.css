@@ -18,6 +18,9 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--white-color);
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 img {
   display: block;
