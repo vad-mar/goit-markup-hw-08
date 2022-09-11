@@ -510,40 +510,21 @@ img {
 }
 
 .overlay {
-  background-image: var(--bg-gradient), url("../../images/mob/mob-hero.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay {
-    background-image: var(--bg-gradient), url("../../images/mob/mob-hero@2x.jpg");
-  }
-}
-@media screen and (min-width: 768px) {
-  .overlay {
-    background-image: var(--bg-gradient), url("../../images/tab/tab-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: var(--bg-gradient), url("../../images/tab/tab-hero@2x.jpg");
-  }
-}
-@media screen and (min-width: 1200px) {
-  .overlay {
-    background-image: var(--bg-gradient), url("../../images/hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: var(--bg-gradient), url("../../images/hero2x.jpg");
-  }
+  max-width: 1600px;
+  background-size: cover;
+  background-color: #2f303a;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero2x.jpg);
+  }
+}
 .hero__title {
   font-weight: 900;
   font-size: 24px;
